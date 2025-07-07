@@ -208,6 +208,9 @@
     "isPaused": {
      "type": "boolean"
     },
+    "keepFiringFor": {
+     "$ref": "#/definitions/Duration"
+    },
     "labels": {
      "additionalProperties": {
       "type": "string"
@@ -467,6 +470,10 @@
     },
     "health": {
      "type": "string"
+    },
+    "keepFiringFor": {
+     "format": "double",
+     "type": "number"
     },
     "labels": {
      "$ref": "#/definitions/Labels"
@@ -3117,6 +3124,10 @@
      "example": false,
      "type": "boolean"
     },
+    "keep_firing_for": {
+     "format": "duration",
+     "type": "string"
+    },
     "labels": {
      "additionalProperties": {
       "type": "string"
@@ -4790,7 +4801,6 @@
    "type": "object"
   },
   "alertGroups": {
-   "description": "AlertGroups alert groups",
    "items": {
     "$ref": "#/definitions/alertGroup",
     "type": "object"
@@ -5077,6 +5087,7 @@
    "type": "object"
   },
   "gettableSilences": {
+   "description": "GettableSilences gettable silences",
    "items": {
     "$ref": "#/definitions/gettableSilence",
     "type": "object"
